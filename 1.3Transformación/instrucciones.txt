@@ -1,0 +1,49 @@
+se instala xampp desde su pagina oficial
+se intala heidisql desde su pagina oficial
+se instala python desde su pagina oficial
+se instala pip:
+py -m pip install
+se crea el entorno virtual con el siguiente comando
+py -m venv venv
+Luego, activa el entorno virtual:
+venv\Scripts\activate
+Si aún no lo tienes instalado django:
+pip install django
+Para verificar que se instaló correctamente:
+django-admin --version
+Crear un nuevo proyecto Django:
+django-admin startproject (nombre del proyecto)
+ Ejecutar el servidor de desarrollo
+Entra al directorio del proyecto y ejecuta el servidor:
+cd (nombre del proyecto)
+instalar panda
+pip install pandas
+modificar archivo init de xampp 
+cambiar esta linea:
+max_allowed_packet=1M
+por :
+max_allowed_packet=128M
+reiniciar xampp 
+guardar el archivo excel en prueba_tecnica\1.3Transformación\prueba1_3\prueba1_3\documentos
+con este nombre: data_prueba_tecnica en formato csv 
+crear migraciones en python con 
+python manage.py makemigrations prueba1_3
+python manage.py migrate prueba1_3
+despues ejecutar el siguiente comando 
+python manage.py cargar_datos
+con esto ya abra cargado los datos del excel a nuestra bd 
+separandolo por tablas
+
+
+
+
+*comentarios 
+Durante la implementación del comando para cargar datos desde un archivo CSV en Django, realicé diversas transformaciones
+ en los datos para garantizar su integridad y compatibilidad con la base de datos. Convertí las fechas a formato datetime,
+ asegurando que los valores nulos se manejaran correctamente. También transformé la columna amount a un formato flotante 
+con dos decimales y reemplacé valores vacíos en otras columnas con identificadores temporales.
+
+Uno de los principales retos fue manejar datos faltantes sin afectar la estructura de la información, asegurando que las 
+claves primarias y fechas se conservaran correctamente. Otro desafío técnico fue el error "Got a packet bigger than 
+'max_allowed_packet' bytes", que requirió ajustes en la configuración de MySQL para permitir la carga de grandes volúmenes de datos.
+ A pesar de estos obstáculos, la transformación y carga de datos se completaron exitosamente.

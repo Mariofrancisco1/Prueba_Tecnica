@@ -1,0 +1,41 @@
+se instala xampp desde su pagina oficial
+se intala heidisql desde su pagina oficial
+se instala python desde su pagina oficial
+se instala pip:
+py -m pip install
+se crea el entorno virtual con el siguiente comando
+py -m venv venv
+Luego, activa el entorno virtual:
+venv\Scripts\activate
+Si aún no lo tienes instalado django:
+pip install django
+Para verificar que se instaló correctamente:
+django-admin --version
+Crear un nuevo proyecto Django:
+django-admin startproject (nombre del proyecto)
+ Ejecutar el servidor de desarrollo
+Entra al directorio del proyecto y ejecuta el servidor:
+cd (nombre del proyecto)
+python manage.py runserver
+Esto iniciará el servidor en: http://127.0.0.1:8000/
+dirigirse a esta liga:
+http://127.0.0.1:8000/exportar_csv/
+descargara automaticamente el excel con los datos de la tabla
+
+
+*comentarios 
+Para la extracción de información en este proyecto, utilicé Python con el framework Django, ya que es un lenguaje ampliamente utilizado 
+en el desarrollo backend y ofrece herramientas eficientes para manejar bases de datos, procesar datos y generar reportes. Django, en particular,
+ proporciona un ORM que facilita la manipulación de datos sin necesidad de escribir consultas SQL directamente, lo que agiliza el desarrollo y 
+mejora la mantenibilidad del código.
+
+El formato elegido para almacenar y manipular los datos fue tablas en una base de datos mysql,
+ ya que esto permite estructurar la información de manera organizada y realizar consultas optimizadas.
+ Además, al trabajar con Django, la estructura de modelos facilita la gestión de las relaciones entre los datos.
+
+Retos encontrados en la extracción de información:
+Problemas con las migraciones: Inicialmente, Django no detectaba las migraciones del modelo data_prueba_tecnica,
+ lo que requería verificar la configuración de la aplicación en INSTALLED_APPS y generar las migraciones manualmente con makemigrations y migrate.
+Compatibilidad con la base de datos: Asegurar que la estructura de la tabla en la base de datos coincidiera con los modelos de Django,
+ incluyendo nombres de campos y tipos de datos.
+Validación de datos: Fue necesario definir correctamente los tipos de datos en el modelo para evitar errores al extraer y procesar la información.

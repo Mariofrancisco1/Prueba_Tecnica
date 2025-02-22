@@ -1,0 +1,11 @@
+USE prueba_tecnica1_3;  
+
+CREATE VIEW total_transacciones_diarias AS
+SELECT 
+    DATE(c.created_at) AS fecha, 
+    co.name AS company_name,  
+    SUM(c.amount) AS monto_total
+FROM prueba1_3_charge c  
+JOIN prueba1_3_company co ON c.company_id = co.id  
+GROUP BY fecha, co.name
+ORDER BY fecha DESC, monto_total DESC;

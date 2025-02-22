@@ -1,0 +1,2 @@
+Elegí MySQL porque es una base de datos rápida, confiable y escalable, ideal para manejar grandes volúmenes de datos de manera eficiente. Además, es fácil de usar y se adapta bien a distintos proyectos.
+Usé HeidiSQL para facilitar la importación de datos, ya que tiene una interfaz intuitiva que simplifica el proceso, haciendo todo más rápido y sin complicaciones.

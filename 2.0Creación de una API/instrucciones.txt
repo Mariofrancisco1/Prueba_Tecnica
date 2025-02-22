@@ -1,0 +1,11 @@
+se instala xampp desde su pagina oficial
+se intala heidisql desde su pagina oficial
+se instala python desde su pagina oficial
+se instala pip:
+py -m pip install
+isntalar flask:
+pip install flask
+para ejecutar la api :
+python app.py
+
+
